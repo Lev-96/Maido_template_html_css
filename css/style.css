@@ -1,0 +1,740 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+img{ 
+    max-width: 100%;
+}
+ul,ol{
+    list-style: none;
+}
+.container{
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+
+
+
+/* Nav-Menu (Start) */
+
+
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+nav h1{
+    color: #3e3e5f;
+    font-weight: 900;
+    font-size: 40px;
+}
+nav ul{
+    display: flex;
+    column-gap: 30px;
+}
+nav ul > li > a{
+    color: #3e3e5f;
+    font-weight: 800;
+    position: relative;
+}
+nav ul > li > a::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: grey;
+    top: -6px;
+    right: -6px;
+    text-align: center;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .7s;
+}
+nav ul > li:hover > a::before{
+    visibility: visible;
+    opacity: 1;
+}
+nav ul > li > .member-signin::after{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #3e3e5f;
+    top: 6px;
+    right: 57px;
+    text-align: center;
+    color: #fff;
+}
+nav ul > li > .member-signup{
+    border: 2px solid #3e3e5f;
+    border-radius: 30px;
+    padding: 3px 10px;
+    transition: all .3s;
+}
+nav ul > li:hover > .member-signup{
+    background-color: #3e3e5f;
+    color: #fff;
+}
+nav ul > li > a > i{
+    font-size: 20px;
+}
+nav ul > li > .member-signup::before,
+.nav-search::before{
+    content: "";
+    background-color: transparent;
+}
+
+
+
+/* Section-Menu (Start) */
+section{
+    padding: 50px 0;
+}
+section .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+section .container > .my-img-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+section .container .section-image-left > div{
+    position: relative;
+}
+section .container .section-image-left  a::after{
+    content: "PINNED";
+    position: absolute;
+    width: 40px;
+    height: 11px;
+    font-size: 10px;
+    font-style: italic;
+    border-radius: 10px;
+    padding: 4px 10px;
+    text-align: center;
+    background-color: #fff;
+    color: #3e3e5f;
+    top: 20px;
+    left: 30px;
+}
+section .container .section-image-left img{
+    border-radius: 15px;
+    height: 390px;
+    width: 500px;
+    opacity: .7;
+    position: relative;
+}
+section .container .section-image-left > div{
+    transition: all .3s;
+}
+section .container .section-image-left:hover > div{
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+section .container .section-image-right > .div-bg{
+    background-color: rgb(255, 123, 0);
+    width: 270px;
+    height: 180px;
+    border-radius: 15px;
+}
+section .container .section-image-right img{
+    max-height: 180px;
+    border-radius: 15px;
+}
+section .container .section-image-right > div{
+    transition: all .3s;
+    position: relative;
+}
+section .container .section-image-right > div:nth-child(1)::before{
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 270px;
+}
+section .container .section-image-left > div > a::before{
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 500px;
+    border-radius: 15px;
+    height: 390px;
+    background-color: rgba(35, 35, 36, 0.767);
+}
+section .container > .my-img-top >  .section-image-left > div:first-child{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 30px;
+    font-style: italic;
+    cursor: pointer;
+}
+section .container > .my-img-top > .section-image-left > div:first-child > div{
+    position: absolute;
+    margin-bottom: 30px;
+}
+section .container .section-image-right{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px 25px;
+    width:50%;
+}
+section .container .section-image-right > .div-bg{
+    background-color: rgb(255, 123, 0);
+    width: 270px;
+    height: 180px;
+    border-radius: 15px;
+}
+section .container .section-image-right img{
+    max-height: 180px;
+    border-radius: 15px;
+}
+section .container .section-image-right > div{
+    transition: all .3s;
+    position: relative;
+}
+section .container .section-image-right > div:nth-child(1)::before{
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 270px;
+    border-radius: 15px;
+    height: 180px;
+    background-color: rgba(70, 86, 230, 0.767);
+}
+section .container .section-image-right > div:nth-child(1):hover{
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+section .container .section-image-right > div:nth-child(2):hover{
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+section .container .section-image-right > div:nth-child(3):hover{
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+section .container .section-image-right > div:nth-child(3)::before{
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 270px;
+    border-radius: 15px;
+    height: 180px;
+    z-index: 0;
+    background-color: rgba(104, 14, 99, 0.767);
+}
+section .container .section-image-right > div:nth-child(4):hover{
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+section .container .section-image-right > div:nth-child(4)::before{
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 270px;
+    border-radius: 15px;
+    height: 180px;
+    z-index: 0;
+    background-color: rgba(255, 73, 246, 0.767);
+}
+section .container > .my-img-top >.section-image-right > div:first-child{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 20px;
+}
+section .container > .my-img-top > .section-image-right > div:first-child > div{
+    position: absolute;
+    margin-bottom: 25px;
+
+}
+section .section-image-right p{
+    font-size: 15px;
+}
+
+section .container > .my-img-top > .section-image-right > div + div:last-child{
+    color: #3e3e5f;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 20px;
+}
+section .container > .my-img-top > .section-image-right > div + div:last-child > div{
+    position: absolute;
+    margin-bottom: 25px;
+
+}
+
+section .container > .my-img-top > .section-image-right > .div-bg{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 20px;
+}
+section .container > .my-img-top > .section-image-right > .div-bg > div > a{
+    color: #3e3e5f;
+}
+section .container > .my-img-top > .section-image-right > .div-bg > div{
+    position: absolute;
+    margin-bottom: 25px;
+
+}
+section .container > .my-img-top > .section-image-right > .div-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 20px;
+    color: #fff;
+}
+section .container > .my-img-top > .section-image-right > .div-text > div{
+    position: absolute;
+    margin-bottom: 25px;
+}
+
+section .container .section-image-right > div > a::after{
+    content: "PINNED";
+    position: absolute;
+    width: 40px;
+    height: 11px;
+    font-size: 10px;
+    font-style: italic;
+    border-radius: 10px;
+    padding: 4px 10px;
+    text-align: center;
+    background-color: #fff;
+    color: #0c0cd1;
+    top: 10px;
+    left: 20px;
+}
+section .container .section-image-right > .div-bg > div > a::before{
+    content: "PINNED";
+    position: absolute;
+    width: 40px;
+    height: 11px;
+    font-size: 10px;
+    font-style: italic;
+    border-radius: 10px;
+    padding: 4px 10px;
+    text-align: center;
+    background-color: #3e3e5f;
+    color:orange;
+    left: -10px;
+    top: -72px;
+}
+section .container .section-image-right > .my-before > a::after{
+    content: "PINNED";
+    position: absolute;
+    width: 40px;
+    height: 11px;
+    font-size: 10px;
+    font-style: italic;
+    border-radius: 10px;
+    padding: 4px 10px;
+    text-align: center;
+    background-color: #3e3e5f;
+    color: rgb(241, 23, 169);
+    top: 10px;
+    left: 20px;
+}
+section .container .section-image-right > .div-text > a::after{
+    content: "PINNED";
+    position: absolute;
+    width: 40px;
+    height: 11px;
+    font-size: 10px;
+    font-style: italic;
+    border-radius: 10px;
+    padding: 4px 10px;
+    text-align: center;
+    background-color: #3e3e5f;
+    color: rgb(207, 15, 233);
+    top: 10px;
+    left: 20px;
+}
+/* Section-Menu (End) */
+
+
+/* Header-Menu (Start) */
+
+
+
+header .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Img blok - oan (Start) */
+
+header .container .my-main .my-img{
+    position: relative;
+    border-radius: 15px;
+    width: 1120px;
+    height: 420px; 
+    min-height: 200px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+header .container .my-img::before{
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 1120px;
+    z-index: 1;
+    border-radius: 15px;
+    height: 500px;
+    cursor: pointer;
+    background-color: rgba(116, 114, 114, 0.281);
+}
+
+/* Image-Hover-Zoom (Start)*/
+
+header .container .my-main .my-img > img{
+    border-radius: 15px;
+    min-width: 100%;
+    min-height: 100%;
+    transition: transform .5s;
+    cursor: pointer;
+}
+header .container .my-main .my-img:hover > img{
+    transform: scale(1.1);
+}
+/* Image-Hover-Zoom (End) */ 
+
+header .container > .my-main > .header-text p{
+    font-size: 18px;
+    margin-top: 20px;
+}
+header .container > .my-main > .header-text a{
+    font-size: 15px;
+    font-style: italic;
+    position: relative;
+    top: -50px;
+    padding: 2px 9px;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    transition: all .3s;
+}
+header .container > .my-main > .header-text > div > div > div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    column-gap: 15px;
+}
+header .container > .my-main > .header-text > div > div > div > div:hover > .my-case{
+    background-color: #eee;
+    color: #3e3e5f;
+}
+header .container > .my-main > .header-text > div > div > div > div + div:hover > .my-open{
+    background-color: #eee;
+    color: #3e3e5f;
+}
+header .container > .my-main > .header-text > div:first-child{
+    position: relative;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+header .container > .my-main > .header-text > div:first-child > div{
+    position: absolute;
+    top: 170px;
+    cursor: pointer;
+    z-index: 2;
+
+}
+/* Img blok - oan (End) */
+
+
+
+/* Img blok - two (Start) */
+
+header .container .my-main .my-img-two{
+    position: relative;
+    border-radius: 15px;
+    width: 1120px;
+    height: 620px; 
+    min-height: 200px;
+    overflow: hidden;
+    opacity: .7;
+    margin: 20px 0;
+}
+header .container .my-img-two::before{
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 1120px;
+    z-index: 1;
+    border-radius: 15px;
+    height: 620px;
+    cursor: pointer;
+    background-color: rgba(252, 211, 79, 0.801);
+}
+
+/* Image-Hover-Zoom (Start)*/
+
+header .container .my-main .my-img-two > img{
+    border-radius: 15px;
+    min-width: 100%;
+    min-height: 100%;
+    transition: transform .5s;
+    cursor: pointer;
+}
+header .container .my-main .my-img-two:hover > img{
+    transform: scale(1.1);
+}
+/* Image-Hover-Zoom (End) */ 
+
+header .container > .my-main > .header-text-two p{
+    font-size: 18px;
+    margin-top: 20px;
+}
+header .container > .my-main > .header-text-two .my-img-text{
+    line-height: 5px;
+    font-size: 25px;
+    position: relative;
+}
+
+header .container > .my-main > .header-text-two a{
+    font-size: 15px;
+    font-style: italic;
+    position: relative;
+    top: -50px;
+    padding: 2px 9px;
+    color: #3e3e5f;
+    border: 1px solid #3e3e5f;
+    border-radius: 10px;
+    transition: all .3s;
+}
+header .container > .my-main > .header-text-two > div > div > div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    column-gap: 15px;
+}
+header .container > .my-main > .header-text-two > div > div > div > div:hover > .my-case{
+    background-color: #3e3e5f;
+    color: #eee;
+}
+header .container > .my-main > .header-text-two > div > div > div > div + div:hover > .my-open{
+    background-color: #3e3e5f;
+    color: #eee;
+}
+header .container > .my-main > .header-text-two > div:first-child{
+    position: relative;
+    color: #3e3e5f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+header .container > .my-main > .header-text-two > div:first-child > div{
+    position: absolute;
+    top: 170px;
+    cursor: pointer;
+    z-index: 2;
+
+}
+/* Img blok - two (End) */
+
+
+/* img blok -true (Start) */
+
+header .container .my-main .my-img-true{
+    position: relative;
+    border-radius: 15px;
+    width: 1120px;
+    height: 620px; 
+    min-height: 200px;
+    overflow: hidden;
+    opacity: .7;
+    margin: 20px 0;
+}
+header .container .my-img-true::before{
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 1120px;
+    z-index: 1;
+    border-radius: 15px;
+    height: 620px;
+    cursor: pointer;
+    background-color: rgba(104, 104, 104, 0.123);
+}
+
+/* Image-Hover-Zoom (Start)*/
+
+header .container .my-main .my-img-true > img{
+    border-radius: 15px;
+    min-width: 100%;
+    min-height: 100%;
+    transition: transform .5s;
+    cursor: pointer;
+}
+header .container .my-main .my-img-true:hover > img{
+    transform: scale(1.1);
+}
+/* Image-Hover-Zoom (End) */ 
+
+header .container > .my-main > .header-text-true p{
+    font-size: 18px;
+    margin-top: 20px;
+}
+header .container > .my-main > .header-text-true a{
+    font-size: 15px;
+    font-style: italic;
+    position: relative;
+    top: -50px;
+    padding: 2px 9px;
+    color: #eee;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    transition: all .3s;
+}
+header .container > .my-main > .header-text-true > div > div > div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    column-gap: 15px;
+}
+header .container > .my-main > .header-text-true > div > div > div > div:hover > .my-case{
+    background-color: #eee;
+    color: #3e3e5f;
+}
+header .container > .my-main > .header-text-true > div > div > div > div + div:hover > .my-open{
+    background-color: #eee;
+    color: #3e3e5f;
+}
+header .container > .my-main > .header-text-true > div:first-child{
+    position: relative;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+header .container > .my-main > .header-text-true > div:first-child > div{
+    position: absolute;
+    top: 170px;
+    cursor: pointer;
+    z-index: 2;
+
+}
+/* Img blok -true (End) */
+
+/* Header-Menu (End) */
+
+
+
+/* Footer-Menu (Start) */
+
+footer{
+    background-color: #888;
+}
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+footer h2{
+    color: #000;
+    font-weight: 900;
+    font-size: 40px;
+}
+footer ul{
+    display: flex;
+    column-gap: 30px;
+}
+footer ul > li > a{
+    color: #000;
+    font-weight: 800;
+    position: relative;
+}
+footer .my-icons{
+    color: #333;
+}
+footer .my-icons::before{
+    content: "";
+    background: 0;
+}
+footer ul > li > a::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #3e3e5f;
+    top: -6px;
+    right: -6px;
+    text-align: center;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .7s;
+}
+footer ul > li:hover > a::before{
+    visibility: visible;
+    opacity: 1;
+}
+footer ul > li > .member-signin::after{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #3e3e5f;
+    top: 6px;
+    right: 57px;
+    text-align: center;
+    color: #fff;
+}
+
+footer ul > li > a > i{
+    font-size: 20px;
+}
+
+
+
+
+
+
